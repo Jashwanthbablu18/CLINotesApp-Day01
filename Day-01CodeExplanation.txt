@@ -1,0 +1,32 @@
+This is a CLI-Note Taking app which was designed as part of my "30-Day Python Challenge." 
+This allows users to add and view notes, which are saved into a file (notes.txt).
+
+Explanation of Code: 
+
+1. Imports:
+   - The code imports the "datetime" module, which is used to get the current date and time for timestamping notes.
+
+2. Functionalities of the functions in code:
+   - show_intro(): This function prints an introduction message to the user, explaining the purpose of the code.
+   
+   - save_note(): This function takes a note as an argument, gets the current date and time, and appends the note with a timestamp 
+     to the file named "notes.txt". If the file does not exist, it will be created. After saving, it prints a successful message.
+   
+   - view_notes(): This function trys to open and read content from "notes.txt". If it opens and has content, then it displays the contents. 
+     If there is no notes no contents in file, it catches the `FileNotFoundError` and informs the user that no notes are available.
+
+3. Main Function:
+   - main(): This is the function where program starts execution. It first calls `show_intro()` function to display the introduction about program. 
+     Then there will be a loop which gives three options to user to choose: add a new note, view existing notes, or exit the program.
+     - If the user chooses "1", it prompts the user to enter a note / content into it and then calls `save_note()` function to save it.
+     - If the user chooses "2", it calls `view_notes()` function to display all saved notes / existing notes.
+     - If the user chooses "3", it displays an exit message and breaks out of the loop, here the program ends.
+     - If the user enters an invalid option, then it displays invalid option message.
+
+4. Program Execution:
+   - The script checks if it is being run directly (as opposed to being imported as a module) with `if __name__ == "__main__":`. If so, it calls `main()` to start the program.
+
+What I've learnt:
+   By this program I've learnt about what is a program:
+      In simple terms programming is nothing but a set of instructions given to system to execute / to complete a task by simple instructions
+      By giving instructions to python I completed a CLI Note making app (A Task).
